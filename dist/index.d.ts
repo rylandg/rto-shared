@@ -1,4 +1,4 @@
-export { PublicUser, ClientUser, ClientUserV, defaultClientUser } from './models/ClientUser';
+export { PublicUser, ClientUser, ClientUserV, defaultClientUser, UserRole, UserRoleV } from './models/ClientUser';
 export { BasicPost, BasicPostV } from './models/BasicPost';
 export { GoogleUser, GoogleUserV } from './models/GoogleUser';
 export { ReviewTag, ReviewTagV, ScoredReviewTag, ScoredReviewTagV } from './models/ReviewTag';

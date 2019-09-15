@@ -3,6 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ClientUser_1 = require("./models/ClientUser");
 exports.ClientUserV = ClientUser_1.ClientUserV;
 exports.defaultClientUser = ClientUser_1.defaultClientUser;
+exports.UserRole = ClientUser_1.UserRole;
+exports.UserRoleV = ClientUser_1.UserRoleV;
 var BasicPost_1 = require("./models/BasicPost");
 exports.BasicPostV = BasicPost_1.BasicPostV;
 var GoogleUser_1 = require("./models/GoogleUser");
