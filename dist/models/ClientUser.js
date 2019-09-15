@@ -8,6 +8,15 @@ exports.PublicUserV = t.type({
     photoURL: t.string,
     displayName: t.string,
 });
+var UserRole;
+(function (UserRole) {
+    UserRole["BETA"] = "BETA";
+    UserRole["ADMIN"] = "ADMIN";
+})(UserRole = exports.UserRole || (exports.UserRole = {}));
+exports.UserRoleV = t.keyof({
+    [UserRole.BETA]: null,
+    [UserRole.ADMIN]: null,
+});
 exports.ClientUserV = optional_1.fixOptionals(t.intersection([
     exports.PublicUserV,
     t.type({
@@ -19,6 +28,7 @@ exports.ClientUserV = optional_1.fixOptionals(t.intersection([
         token: optional_1.optional(t.string),
         postIds: t.array(t.string),
         reviewIds: t.array(t.string),
+        roles: optional_1.optional(t.array(exports.UserRoleV)),
     }),
 ]));
 function defaultClientUser() {
@@ -34,6 +44,7 @@ function defaultClientUser() {
         token: '',
         postIds: [],
         reviewIds: [],
+        roles: [],
     };
 }
 exports.defaultClientUser = defaultClientUser;

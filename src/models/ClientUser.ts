@@ -12,6 +12,16 @@ export const PublicUserV = t.type({
 
 export type PublicUser = t.TypeOf<typeof PublicUserV>;
 
+export enum UserRole {
+  BETA = 'BETA',
+  ADMIN = 'ADMIN',
+}
+
+export const UserRoleV = t.keyof({
+  [UserRole.BETA]: null,
+  [UserRole.ADMIN]: null,
+});
+
 export const ClientUserV = fixOptionals(t.intersection([
   PublicUserV,
   t.type({
@@ -23,6 +33,7 @@ export const ClientUserV = fixOptionals(t.intersection([
     token: optional(t.string),
     postIds: t.array(t.string),
     reviewIds: t.array(t.string),
+    roles: optional(t.array(UserRoleV)),
   }),
 ]));
 
@@ -39,6 +50,7 @@ export function defaultClientUser(): ClientUser {
     token: '',
     postIds: [],
     reviewIds: [],
+    roles: [],
   };
 }
 
