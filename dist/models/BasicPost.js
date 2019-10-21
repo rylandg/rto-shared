@@ -7,9 +7,8 @@ exports.BasicPostV = t.type({
     title: t.string,
     isPublic: t.boolean,
     accelerated: t.boolean,
-    maxIterations: t.number,
     reviewType: ReviewType_1.ReviewTypeV,
     reviewTags: t.array(ReviewTag_1.ReviewTagV),
-    timePerIterationInMinutes: t.number,
+    timeInMinutes: t.number,
 });
 //# sourceMappingURL=BasicPost.js.map

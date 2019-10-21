@@ -3,7 +3,6 @@ export declare const BasicPostV: t.TypeC<{
     title: t.StringC;
     isPublic: t.BooleanC;
     accelerated: t.BooleanC;
-    maxIterations: t.NumberC;
     reviewType: t.TypeC<{
         spellCheck: t.BooleanC;
         grammarCheck: t.BooleanC;
@@ -15,6 +14,6 @@ export declare const BasicPostV: t.TypeC<{
         value: t.StringC;
         magnitude: t.NumberC;
     }>>;
-    timePerIterationInMinutes: t.NumberC;
+    timeInMinutes: t.NumberC;
 }>;
 export declare type BasicPost = t.TypeOf<typeof BasicPostV>;

@@ -17,7 +17,6 @@ export declare const ReviewablePostV: t.IntersectionC<[t.TypeC<{
     title: t.StringC;
     isPublic: t.BooleanC;
     accelerated: t.BooleanC;
-    maxIterations: t.NumberC;
     reviewType: t.TypeC<{
         spellCheck: t.BooleanC;
         grammarCheck: t.BooleanC;
@@ -29,17 +28,16 @@ export declare const ReviewablePostV: t.IntersectionC<[t.TypeC<{
         value: t.StringC;
         magnitude: t.NumberC;
     }>>;
-    timePerIterationInMinutes: t.NumberC;
+    timeInMinutes: t.NumberC;
 }>, t.TypeC<{
     id: t.StringC;
     ownerId: t.StringC;
     starValue: t.NumberC;
     googleDocsId: t.StringC;
-    currentIterations: t.NumberC;
     reviewerIds: t.ArrayC<t.StringC>;
     observers: t.ArrayC<t.StringC>;
     timeCreated: t.StringC;
-    endIterationTime: t.StringC;
+    endTime: t.StringC;
     phase: t.KeyofC<{
         [PostPhase.UNPUBLISHED]: null;
         [PostPhase.WAITING_FOR_MATCH]: null;
