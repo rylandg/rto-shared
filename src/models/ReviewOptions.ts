@@ -8,35 +8,6 @@ import { fixOptionals, optional } from '../optional';
 import { ReviewTag, ReviewTagV } from './ReviewTag';
 import { ReviewType, ReviewTypeV } from './ReviewType';
 
-// export const ReviewTagV = t.type({
-//   value: t.string,
-//   magnitude: t.number,
-// });
-
-// export const ReviewTypeV = t.type({
-//   spellCheck: t.boolean,
-//   grammarCheck: t.boolean,
-//   factCheck: t.boolean,
-//   highLevelCheck: t.boolean,
-//   technicalCheck: t.boolean,
-// });
-// // export const ReviewOptionsV = t.intersection([
-//   BasicPostV,
-//   t.type({
-//     id: t.string,
-//     ownerId: t.string,
-//     starValue: t.number,
-//     isStarted: t.boolean,
-//     googleDocsId: t.string,
-//     currentIterations: t.number,
-//     reviewerIds: t.array(t.string),
-//     observers: t.array(t.string),
-//     timeCreated: t.string,
-//     endIterationTime: t.string,
-//     reviewCompleted: t.boolean,
-//   }),
-// ]);
-
 export const ReviewOptionsV = fixOptionals(t.type({
   reviewTypes: ReviewTypeV,
   tags: optional(t.array(ReviewTagV)),

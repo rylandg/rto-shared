@@ -7,10 +7,9 @@ export const BasicPostV = t.type({
   title: t.string,
   isPublic: t.boolean,
   accelerated: t.boolean,
-  maxIterations: t.number,
   reviewType: ReviewTypeV,
   reviewTags: t.array(ReviewTagV),
-  timePerIterationInMinutes: t.number,
+  timeInMinutes: t.number,
 });
 
 export type BasicPost = t.TypeOf<typeof BasicPostV>;

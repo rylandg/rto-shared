@@ -28,11 +28,10 @@ export const ReviewablePostV = t.intersection([
     ownerId: t.string,
     starValue: t.number,
     googleDocsId: t.string,
-    currentIterations: t.number,
     reviewerIds: t.array(t.string),
     observers: t.array(t.string),
     timeCreated: t.string,
-    endIterationTime: t.string,
+    endTime: t.string,
     phase: PostPhaseV,
   }),
 ]);
