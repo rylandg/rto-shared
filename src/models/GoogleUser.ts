@@ -1,12 +1,12 @@
 import * as t from 'io-ts';
 
 export const GoogleUserV = t.type({
-  googleId: t.string,
+  google_id: t.string,
   email: t.string,
   name: t.string,
-  imageUrl: t.string,
+  image_url: t.string,
   access_token: t.string,
-  tokenObj: t.any,
+  token_obj: t.any,
 });
 
 export type GoogleUser = t.TypeOf<typeof GoogleUserV>;

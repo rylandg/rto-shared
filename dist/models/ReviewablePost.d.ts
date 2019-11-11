@@ -15,29 +15,28 @@ export declare const PostPhaseV: t.KeyofC<{
 }>;
 export declare const ReviewablePostV: t.IntersectionC<[t.TypeC<{
     title: t.StringC;
-    isPublic: t.BooleanC;
+    is_public: t.BooleanC;
     accelerated: t.BooleanC;
-    reviewType: t.TypeC<{
-        spellCheck: t.BooleanC;
-        grammarCheck: t.BooleanC;
-        factCheck: t.BooleanC;
-        highLevelCheck: t.BooleanC;
-        technicalCheck: t.BooleanC;
+    review_type: t.TypeC<{
+        spell_check: t.BooleanC;
+        grammar_check: t.BooleanC;
+        fact_check: t.BooleanC;
+        high_level_check: t.BooleanC;
+        technical_check: t.BooleanC;
     }>;
-    reviewTags: t.ArrayC<t.TypeC<{
+    review_tags: t.ArrayC<t.TypeC<{
         value: t.StringC;
         magnitude: t.NumberC;
     }>>;
-    timeInMinutes: t.NumberC;
+    time_in_minutes: t.NumberC;
 }>, t.TypeC<{
     id: t.StringC;
-    ownerId: t.StringC;
-    starValue: t.NumberC;
-    googleDocsId: t.StringC;
-    reviewerIds: t.ArrayC<t.StringC>;
+    owner_id: t.StringC;
+    star_value: t.NumberC;
+    google_docs_id: t.StringC;
+    reviewer_ids: t.ArrayC<t.StringC>;
     observers: t.ArrayC<t.StringC>;
-    timeCreated: t.StringC;
-    endTime: t.StringC;
+    time_created: t.StringC;
     phase: t.KeyofC<{
         [PostPhase.UNPUBLISHED]: null;
         [PostPhase.WAITING_FOR_MATCH]: null;

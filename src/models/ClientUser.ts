@@ -6,8 +6,8 @@ import { ReviewTag, ReviewTagV } from './ReviewTag';
 
 export const PublicUserV = t.type({
   uid: t.string,
-  photoURL: t.string,
-  displayName: t.string,
+  photo_url: t.string,
+  display_name: t.string,
 });
 
 export type PublicUser = t.TypeOf<typeof PublicUserV>;
@@ -26,13 +26,13 @@ export const ClientUserV = fixOptionals(t.intersection([
   PublicUserV,
   t.type({
     name: t.string,
-    emailAddress: t.string,
-    goldStars: t.number,
+    email_address: t.string,
+    gold_stars: t.number,
     demerits: t.number,
-    profileTags: t.array(ReviewTagV),
+    profile_tags: t.array(ReviewTagV),
     token: optional(t.string),
-    postIds: t.array(t.string),
-    reviewIds: t.array(t.string),
+    post_ids: t.array(t.string),
+    review_ids: t.array(t.string),
     roles: optional(t.array(UserRoleV)),
   }),
 ]));
@@ -40,16 +40,16 @@ export const ClientUserV = fixOptionals(t.intersection([
 export function defaultClientUser(): ClientUser {
   return {
     uid: '',
-    photoURL: '',
-    displayName: '',
+    photo_url: '',
+    display_name: '',
     name: '',
-    emailAddress: '',
-    goldStars: 0,
+    email_address: '',
+    gold_stars: 0,
     demerits: 0,
-    profileTags: [],
+    profile_tags: [],
     token: '',
-    postIds: [],
-    reviewIds: [],
+    post_ids: [],
+    review_ids: [],
     roles: [],
   };
 }

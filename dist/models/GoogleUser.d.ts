@@ -1,10 +1,10 @@
 import * as t from 'io-ts';
 export declare const GoogleUserV: t.TypeC<{
-    googleId: t.StringC;
+    google_id: t.StringC;
     email: t.StringC;
     name: t.StringC;
-    imageUrl: t.StringC;
+    image_url: t.StringC;
     access_token: t.StringC;
-    tokenObj: t.AnyC;
+    token_obj: t.AnyC;
 }>;
 export declare type GoogleUser = t.TypeOf<typeof GoogleUserV>;

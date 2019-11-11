@@ -5,11 +5,11 @@ import { ReviewType, ReviewTypeV } from './ReviewType';
 
 export const BasicPostV = t.type({
   title: t.string,
-  isPublic: t.boolean,
+  is_public: t.boolean,
   accelerated: t.boolean,
-  reviewType: ReviewTypeV,
-  reviewTags: t.array(ReviewTagV),
-  timeInMinutes: t.number,
+  review_type: ReviewTypeV,
+  review_tags: t.array(ReviewTagV),
+  time_in_minutes: t.number,
 });
 
 export type BasicPost = t.TypeOf<typeof BasicPostV>;

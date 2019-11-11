@@ -1,11 +1,11 @@
 import * as t from 'io-ts';
 
 export const ReviewTypeV = t.type({
-  spellCheck: t.boolean,
-  grammarCheck: t.boolean,
-  factCheck: t.boolean,
-  highLevelCheck: t.boolean,
-  technicalCheck: t.boolean,
+  spell_check: t.boolean,
+  grammar_check: t.boolean,
+  fact_check: t.boolean,
+  high_level_check: t.boolean,
+  technical_check: t.boolean,
 });
 
 export type ReviewType = t.TypeOf<typeof ReviewTypeV>;
@@ -16,10 +16,10 @@ function compareCheck(reviewerStatus: boolean, revieweeStatus: boolean): boolean
 
 export function compareReviewTypes(reviewer: ReviewType, reviewee: ReviewType): ReviewType {
   return {
-    spellCheck: compareCheck(reviewer.spellCheck, reviewee.spellCheck),
-    grammarCheck: compareCheck(reviewer.grammarCheck, reviewee.grammarCheck),
-    factCheck: compareCheck(reviewer.factCheck, reviewee.factCheck),
-    highLevelCheck: compareCheck(reviewer.highLevelCheck, reviewee.highLevelCheck),
-    technicalCheck: compareCheck(reviewer.technicalCheck, reviewee.technicalCheck),
+    spell_check: compareCheck(reviewer.spell_check, reviewee.spell_check),
+    grammar_check: compareCheck(reviewer.grammar_check, reviewee.grammar_check),
+    fact_check: compareCheck(reviewer.fact_check, reviewee.fact_check),
+    high_level_check: compareCheck(reviewer.high_level_check, reviewee.high_level_check),
+    technical_check: compareCheck(reviewer.technical_check, reviewee.technical_check),
   };
 }

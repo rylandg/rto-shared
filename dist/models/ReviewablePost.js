@@ -1,6 +1,13 @@
 "use strict";
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const t = require("io-ts");
+const t = __importStar(require("io-ts"));
 const __1 = require("../");
 var PostPhase;
 (function (PostPhase) {
@@ -21,13 +28,12 @@ exports.ReviewablePostV = t.intersection([
     __1.BasicPostV,
     t.type({
         id: t.string,
-        ownerId: t.string,
-        starValue: t.number,
-        googleDocsId: t.string,
-        reviewerIds: t.array(t.string),
+        owner_id: t.string,
+        star_value: t.number,
+        google_docs_id: t.string,
+        reviewer_ids: t.array(t.string),
         observers: t.array(t.string),
-        timeCreated: t.string,
-        endTime: t.string,
+        time_created: t.string,
         phase: exports.PostPhaseV,
     }),
 ]);

@@ -9,9 +9,9 @@ import { ReviewTag, ReviewTagV } from './ReviewTag';
 import { ReviewType, ReviewTypeV } from './ReviewType';
 
 export const ReviewOptionsV = fixOptionals(t.type({
-  reviewTypes: ReviewTypeV,
+  review_types: ReviewTypeV,
   tags: optional(t.array(ReviewTagV)),
-  allowPartialMatches: t.boolean,
+  allow_partial_matches: t.boolean,
 }));
 
 export type ReviewOptions = t.TypeOf<typeof ReviewOptionsV>;
