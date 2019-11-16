@@ -9,3 +9,4 @@ export { optional, fixOptionals } from './optional';
 export { TagSet } from './TagSet';
 export { validateType } from './validateType';
 export { restrictShape } from './restrictShape';
+export { errorCodes, ErrorCode, maybeTranslateError } from './errors';
