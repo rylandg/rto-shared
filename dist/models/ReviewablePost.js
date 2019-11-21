@@ -35,6 +35,7 @@ exports.ReviewablePostV = t.intersection([
         observers: t.array(t.string),
         time_created: t.string,
         phase: exports.PostPhaseV,
+        pending_reviewers: t.array(t.string),
     }),
 ]);
 //# sourceMappingURL=ReviewablePost.js.map

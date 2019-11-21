@@ -44,5 +44,6 @@ export declare const ReviewablePostV: t.IntersectionC<[t.TypeC<{
         [PostPhase.REVIEWEE_TURN]: null;
         [PostPhase.COMPLETED]: null;
     }>;
+    pending_reviewers: t.ArrayC<t.StringC>;
 }>]>;
 export declare type ReviewablePost = t.TypeOf<typeof ReviewablePostV>;
