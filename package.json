@@ -18,7 +18,7 @@
     "typescript": "^3.2.2",
     "@types/uuid": "^3.4.5"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "fp-ts": "^2.0.4",
     "io-ts": "^2.0.1",
