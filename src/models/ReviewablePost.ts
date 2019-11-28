@@ -32,7 +32,6 @@ export const ReviewablePostV = t.intersection([
     observers: t.array(t.string),
     time_created: t.string,
     phase: PostPhaseV,
-    pending_reviewers: t.array(t.string),
   }),
 ]);
 
