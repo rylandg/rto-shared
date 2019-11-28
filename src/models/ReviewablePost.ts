@@ -21,6 +21,23 @@ export const PostPhaseV = t.keyof({
   [PostPhase.COMPLETED]: null,
 });
 
+export enum ReviewStatus {
+  PENDING = 'PENDING',
+  ACCEPTED = 'ACCEPTED',
+  REJECTED = 'REJECTED',
+}
+
+export const ReviewStatusV = t.keyof({
+  [ReviewStatus.PENDING]: null,
+  [ReviewStatus.ACCEPTED]: null,
+  [ReviewStatus.REJECTED]: null,
+});
+
+export const ReviewerV = t.type({
+  user_id: t.string,
+  status: ReviewStatusV,
+});
+
 export const ReviewablePostV = t.intersection([
   BasicPostV,
   t.type({
@@ -28,10 +45,9 @@ export const ReviewablePostV = t.intersection([
     owner_id: t.string,
     star_value: t.number,
     google_docs_id: t.string,
-    reviewer_ids: t.array(t.string),
-    observers: t.array(t.string),
     time_created: t.string,
     phase: PostPhaseV,
+    reviewers: t.array(ReviewerV),
   }),
 ]);
 
