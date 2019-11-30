@@ -10,3 +10,4 @@ export { TagSet } from './TagSet';
 export { validateType } from './validateType';
 export { restrictShape } from './restrictShape';
 export { errorCodes, ErrorCode, maybeTranslateError } from './errors';
+export { UpdateOp } from './updateOps';
