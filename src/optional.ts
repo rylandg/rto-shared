@@ -25,3 +25,5 @@ export const fixOptionals = <C extends t.Mixed>(c: C): t.Type<MakeOptional<t.Typ
  */
 export const optional = <C extends t.Mixed>(c: C): t.Type<t.TypeOf<C> | undefined, t.OutputOf<C>, t.InputOf<C>> =>
   t.union([t.undefined, c])
+
+export const Nullable = t.union([t.null, t.undefined]);

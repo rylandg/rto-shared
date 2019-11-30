@@ -50,7 +50,7 @@ export function defaultClientUser(): ClientUser {
     token: '',
     post_ids: [],
     review_ids: [],
-    roles: [],
+    roles: [UserRole.BETA],
   };
 }
 

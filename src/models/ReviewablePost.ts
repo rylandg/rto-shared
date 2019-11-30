@@ -3,7 +3,9 @@ import { ThrowReporter } from 'io-ts/lib/ThrowReporter';
 import { pipe } from 'fp-ts/lib/pipeable'
 import { fold } from 'fp-ts/lib/Either'
 
-import { BasicPost, BasicPostV, ReviewType, ReviewTypeV, ReviewTag, ReviewTagV, fixOptionals, optional } from '../';
+import { Nullable } from '../optional';
+
+import { BasicPost, BasicPostV, ReviewType, ReviewTypeV, ReviewTag, ReviewTagV } from '../';
 
 export enum PostPhase {
   UNPUBLISHED = 'UNPUBLISHED',
@@ -33,10 +35,10 @@ export const ReviewStatusV = t.keyof({
   [ReviewStatus.REJECTED]: null,
 });
 
-export const ReviewerV = fixOptionals(t.type({
-  user_id: optional(t.string),
+export const ReviewerV = t.type({
+  user_id: t.union([t.string, Nullable]),
   status: ReviewStatusV,
-}));
+});
 
 export type Reviewer = t.TypeOf<typeof ReviewerV>;
 

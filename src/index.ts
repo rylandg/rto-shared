@@ -4,7 +4,7 @@ export { GoogleUser, GoogleUserV } from './models/GoogleUser';
 export { ReviewTag, ReviewTagV, ScoredReviewTag, ScoredReviewTagV } from './models/ReviewTag';
 export { compareReviewTypes, ReviewType, ReviewTypeV } from './models/ReviewType';
 export { ReviewOptions, ReviewOptionsV, validateReviewOptions } from './models/ReviewOptions';
-export { PostPhase, PostPhaseV, ReviewablePost, ReviewablePostV } from './models/ReviewablePost';
+export { PostPhase, PostPhaseV, ReviewablePost, ReviewablePostV, Reviewer, ReviewStatus, ReviewStatusV, ReviewerV } from './models/ReviewablePost';
 export { optional, fixOptionals } from './optional';
 export { TagSet } from './TagSet';
 export { validateType } from './validateType';
